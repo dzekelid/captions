@@ -26,7 +26,7 @@ apis:
   tags: Captions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-put.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
