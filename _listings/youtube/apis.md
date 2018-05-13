@@ -27,16 +27,19 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-id-parameters.md
-- name: Youtube Put Captions
-  description: Updates a caption track. When updating a caption track, you can change
-    the track's draft status, upload a new caption file for the track, or both.
+- name: Youtube Get Captions
+  description: Downloads a caption track. The caption track is returned in its original
+    format unless the request specifies a value for the tfmt parameter and in its
+    original language unless the request specifies a value for the tlang parameter.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
   humanURL: https://www.youtube.com/
   baseURL: https://www.googleapis.com//youtube/v1
   tags: Captions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-put.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-id-get.md
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-id-get-postman.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
