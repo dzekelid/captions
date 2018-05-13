@@ -27,17 +27,19 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-id-parameters.md
-- name: Youtube Delete Captions
-  description: Deletes a specified caption track.
+- name: Youtube Get Captions
+  description: Returns a list of caption tracks that are associated with a specified
+    video. Note that the API response does not contain the actual captions and that
+    the captions.download method provides the ability to retrieve a caption track.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
   humanURL: https://www.youtube.com/
   baseURL: https://www.googleapis.com//youtube/v1
   tags: Captions
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-delete.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-delete-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get-postman.md
 x-common:
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
