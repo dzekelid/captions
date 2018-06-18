@@ -77,16 +77,6 @@ paths:
           description: OK
       tags:
       - Captions
-    parameters:
-      summary: Parameters Captions
-      description: Parameters captions
-      operationId: parametersCaptions
-      x-api-path-slug: captions-parameters
-      responses:
-        200:
-          description: OK
-      tags:
-      - Captions
     post:
       summary: Add Captions
       description: Uploads a caption track.

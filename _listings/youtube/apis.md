@@ -7,10 +7,10 @@ description: YouTube allows billions of people to discover, watch and share orig
   and advertisers large and small.
 image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
 x-kinRank: "9"
-x-alexaRank: ""
+x-alexaRank: "0"
 tags: Captions
-created: "2018-05-20"
-modified: "2018-05-20"
+created: "2018-06-17"
+modified: "2018-06-17"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/apis.md
 specificationVersion: "0.14"
 apis:
@@ -40,18 +40,6 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get-openapi.md
-- name: Youtube Parameters Captions
-  x-api-slug: youtube
-  description: Parameters captions
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
-  humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions
-  tags: Captions
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-parameters-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-parameters-openapi.md
 - name: Youtube Add Captions
   x-api-slug: youtube
   description: Uploads a caption track.
@@ -87,18 +75,6 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-get-openapi.md
-- name: Youtube Parameters Captions
-  x-api-slug: youtube
-  description: Parameters captions
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/youtube-logo.png
-  humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions/{id}
-  tags: Captions
-  properties:
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-parameters-postman.md
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-parameters-openapi.md
 - name: Youtube
   x-api-slug: youtube
   description: YouTube allows billions of people to discover, watch and share originally-created
