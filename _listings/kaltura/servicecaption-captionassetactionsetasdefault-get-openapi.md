@@ -3,8 +3,9 @@ swagger: "2.0"
 x-collection-name: Kaltura
 x-complete: 0
 info:
-  title: Kaltura VPaaS Get Service Captionsearch Captionassetitem Action Search
-  description: Search caption asset items by filter, pager and free text
+  title: Kaltura VPaaS Get Service Caption Captionasset Action Setasdefault
+  description: Markss the caption as default and removes that mark from all other
+    caption assets of the entry.
   version: 3.3.0
 host: www.kaltura.com
 basePath: /api_v3

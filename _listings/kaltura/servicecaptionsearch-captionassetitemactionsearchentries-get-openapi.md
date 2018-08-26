@@ -15,6 +15,1098 @@ produces:
 consumes:
 - application/json
 paths:
+  /service/caption_captionasset/action/add:
+    get:
+      summary: Get Service Caption Captionasset Action Add
+      description: Add caption asset
+      operationId: captionAsset.add
+      x-api-path-slug: servicecaption-captionassetactionadd-get
+      parameters:
+      - in: query
+        name: captionAsset[accuracy]
+        description: The Accuracy of the caption content
+      - in: query
+        name: captionAsset[actualSourceAssetParamsIds]
+        description: Comma separated list of source flavor params ids
+      - in: query
+        name: captionAsset[captionParamsId]
+        description: '`insertOnly`The Caption Params used to create this Caption Asset'
+      - in: query
+        name: captionAsset[fileExt]
+        description: '`insertOnly`The file extension'
+      - in: query
+        name: captionAsset[format]
+        description: '`insertOnly`Enum Type: `KalturaCaptionType`The caption format'
+      - in: query
+        name: captionAsset[isDefault]
+        description: 'Enum Type: `KalturaNullableBoolean`Is default caption asset
+          of the entry'
+      - in: query
+        name: captionAsset[label]
+        description: Friendly label
+      - in: query
+        name: captionAsset[language]
+        description: 'Enum Type: `KalturaLanguage`The language of the caption asset
+          content'
+      - in: query
+        name: captionAsset[parentId]
+        description: '`insertOnly`The parent id of the asset'
+      - in: query
+        name: captionAsset[partnerData]
+        description: Partner private data
+      - in: query
+        name: captionAsset[partnerDescription]
+        description: Partner friendly description
+      - in: query
+        name: captionAsset[tags]
+        description: Tags used to identify the Flavor Asset in various scenarios
+      - in: query
+        name: entryId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - Add
+  /service/caption_captionasset/action/delete:
+    get:
+      summary: Get Service Caption Captionasset Action Delete
+      description: ""
+      operationId: captionAsset.delete
+      x-api-path-slug: servicecaption-captionassetactiondelete-get
+      parameters:
+      - in: query
+        name: captionAssetId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - Delete
+  /service/caption_captionasset/action/get:
+    get:
+      summary: Get Service Caption Captionasset Action Get
+      description: ""
+      operationId: captionAsset.get
+      x-api-path-slug: servicecaption-captionassetactionget-get
+      parameters:
+      - in: query
+        name: captionAssetId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - Get
+  /service/caption_captionasset/action/getRemotePaths:
+    get:
+      summary: Get Service Caption Captionasset Action Getremotepaths
+      description: Get remote storage existing paths for the asset
+      operationId: captionAsset.getRemotePaths
+      x-api-path-slug: servicecaption-captionassetactiongetremotepaths-get
+      parameters:
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - GetRemotePaths
+  /service/caption_captionasset/action/getUrl:
+    get:
+      summary: Get Service Caption Captionasset Action Geturl
+      description: Get download URL for the asset
+      operationId: captionAsset.getUrl
+      x-api-path-slug: servicecaption-captionassetactiongeturl-get
+      parameters:
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      - in: query
+        name: storageId
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - GetUrl
+  /service/caption_captionasset/action/list:
+    get:
+      summary: Get Service Caption Captionasset Action List
+      description: List caption Assets by filter and pager
+      operationId: captionAsset.list
+      x-api-path-slug: servicecaption-captionassetactionlist-get
+      parameters:
+      - in: query
+        name: filter[advancedSearch][attribute]
+        description: 'Enum Type: `KalturaBaseEntryCompareAttribute`'
+      - in: query
+        name: filter[advancedSearch][categoriesMatchOr]
+      - in: query
+        name: filter[advancedSearch][categoryEntryStatusIn]
+      - in: query
+        name: filter[advancedSearch][categoryIdEqual]
+      - in: query
+        name: filter[advancedSearch][comparison]
+        description: 'Enum Type: `KalturaSearchConditionComparison`'
+      - in: query
+        name: filter[advancedSearch][contentLike]
+      - in: query
+        name: filter[advancedSearch][contentMultiLikeAnd]
+      - in: query
+        name: filter[advancedSearch][contentMultiLikeOr]
+      - in: query
+        name: filter[advancedSearch][cuePointsFreeText]
+      - in: query
+        name: filter[advancedSearch][cuePointSubTypeEqual]
+      - in: query
+        name: filter[advancedSearch][cuePointTypeIn]
+      - in: query
+        name: filter[advancedSearch][depthGreaterThanEqual]
+      - in: query
+        name: filter[advancedSearch][distributionProfileId]
+      - in: query
+        name: filter[advancedSearch][distributionSunStatus]
+        description: 'Enum Type: `KalturaEntryDistributionSunStatus`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionFlag]
+        description: 'Enum Type: `KalturaEntryDistributionFlag`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionStatus]
+        description: 'Enum Type: `KalturaEntryDistributionStatus`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionValidationErrors]
+        description: Comma seperated validation error types
+      - in: query
+        name: filter[advancedSearch][extendedStatusEqual]
+        description: 'Enum Type: `KalturaUserEntryExtendedStatus`'
+      - in: query
+        name: filter[advancedSearch][extendedStatusIn]
+      - in: query
+        name: filter[advancedSearch][field]
+      - in: query
+        name: filter[advancedSearch][hasEntryDistributionValidationErrors]
+      - in: query
+        name: filter[advancedSearch][idEqual]
+      - in: query
+        name: filter[advancedSearch][idIn]
+      - in: query
+        name: filter[advancedSearch][indexIdGreaterThan]
+      - in: query
+        name: filter[advancedSearch][isQuiz]
+        description: 'Enum Type: `KalturaNullableBoolean`'
+      - in: query
+        name: filter[advancedSearch][items]
+      - in: query
+        name: filter[advancedSearch][memberIdEq]
+      - in: query
+        name: filter[advancedSearch][memberIdIn]
+      - in: query
+        name: filter[advancedSearch][memberPermissionsMatchAnd]
+      - in: query
+        name: filter[advancedSearch][memberPermissionsMatchOr]
+      - in: query
+        name: filter[advancedSearch][metadataProfileId]
+      - in: query
+        name: filter[advancedSearch][noDistributionProfiles]
+      - in: query
+        name: filter[advancedSearch][not]
+      - in: query
+        name: filter[advancedSearch][objectType]
+      - in: query
+        name: filter[advancedSearch][orderBy]
+        description: 'Enum Type: `KalturaCategoryEntryAdvancedOrderBy`'
+      - in: query
+        name: filter[advancedSearch][type]
+        description: 'Enum Type: `KalturaSearchOperatorType`'
+      - in: query
+        name: filter[advancedSearch][updatedAtGreaterThanOrEqual]
+      - in: query
+        name: filter[advancedSearch][updatedAtLessThanOrEqual]
+      - in: query
+        name: filter[advancedSearch][userIdEqual]
+      - in: query
+        name: filter[advancedSearch][userIdIn]
+      - in: query
+        name: filter[advancedSearch][value]
+      - in: query
+        name: filter[advancedSearch][watermarkId]
+      - in: query
+        name: filter[captionParamsIdEqual]
+      - in: query
+        name: filter[captionParamsIdIn]
+      - in: query
+        name: filter[contentLike]
+      - in: query
+        name: filter[contentMultiLikeAnd]
+      - in: query
+        name: filter[contentMultiLikeOr]
+      - in: query
+        name: filter[createdAtGreaterThanOrEqual]
+      - in: query
+        name: filter[createdAtLessThanOrEqual]
+      - in: query
+        name: filter[deletedAtGreaterThanOrEqual]
+      - in: query
+        name: filter[deletedAtLessThanOrEqual]
+      - in: query
+        name: filter[endTimeGreaterThanOrEqual]
+      - in: query
+        name: filter[endTimeLessThanOrEqual]
+      - in: query
+        name: filter[entryIdEqual]
+      - in: query
+        name: filter[entryIdIn]
+      - in: query
+        name: filter[flavorParamsIdEqual]
+      - in: query
+        name: filter[flavorParamsIdIn]
+      - in: query
+        name: filter[formatEqual]
+        description: 'Enum Type: `KalturaAttachmentType`'
+      - in: query
+        name: filter[formatIn]
+      - in: query
+        name: filter[idEqual]
+      - in: query
+        name: filter[idIn]
+      - in: query
+        name: filter[labelEqual]
+      - in: query
+        name: filter[labelIn]
+      - in: query
+        name: filter[languageEqual]
+        description: 'Enum Type: `KalturaLanguage`'
+      - in: query
+        name: filter[languageIn]
+      - in: query
+        name: filter[objectType]
+      - in: query
+        name: filter[orderBy]
+      - in: query
+        name: filter[partnerDescriptionLike]
+      - in: query
+        name: filter[partnerDescriptionMultiLikeAnd]
+      - in: query
+        name: filter[partnerDescriptionMultiLikeOr]
+      - in: query
+        name: filter[partnerIdEqual]
+      - in: query
+        name: filter[partnerIdIn]
+      - in: query
+        name: filter[sizeGreaterThanOrEqual]
+      - in: query
+        name: filter[sizeLessThanOrEqual]
+      - in: query
+        name: filter[startTimeGreaterThanOrEqual]
+      - in: query
+        name: filter[startTimeLessThanOrEqual]
+      - in: query
+        name: filter[statusEqual]
+        description: 'Enum Type: `KalturaAttachmentAssetStatus`'
+      - in: query
+        name: filter[statusIn]
+      - in: query
+        name: filter[statusNotIn]
+      - in: query
+        name: filter[tagsLike]
+      - in: query
+        name: filter[tagsMultiLikeAnd]
+      - in: query
+        name: filter[tagsMultiLikeOr]
+      - in: query
+        name: filter[thumbParamsIdEqual]
+      - in: query
+        name: filter[thumbParamsIdIn]
+      - in: query
+        name: filter[typeIn]
+      - in: query
+        name: filter[updatedAtGreaterThanOrEqual]
+      - in: query
+        name: filter[updatedAtLessThanOrEqual]
+      - in: query
+        name: No Name
+      - in: query
+        name: pager[pageIndex]
+        description: The page number for which {pageSize} of objects should be retrieved
+          (Default is 1)
+      - in: query
+        name: pager[pageSize]
+        description: The number of objects to retrieve
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - List
+  /service/caption_captionasset/action/serve:
+    get:
+      summary: Get Service Caption Captionasset Action Serve
+      description: Serves caption by its id
+      operationId: captionAsset.serve
+      x-api-path-slug: servicecaption-captionassetactionserve-get
+      parameters:
+      - in: query
+        name: captionAssetId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - Serve
+  /service/caption_captionasset/action/serveByEntryId:
+    get:
+      summary: Get Service Caption Captionasset Action Servebyentryid
+      description: Serves caption by entry id and thumnail params id
+      operationId: captionAsset.serveByEntryId
+      x-api-path-slug: servicecaption-captionassetactionservebyentryid-get
+      parameters:
+      - in: query
+        name: captionParamId
+        description: if not set, default caption will be used
+      - in: query
+        name: entryId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - ServeByEntryId
+  /service/caption_captionasset/action/serveWebVTT:
+    get:
+      summary: Get Service Caption Captionasset Action Servewebvtt
+      description: Serves caption by its id converting it to segmented WebVTT
+      operationId: captionAsset.serveWebVTT
+      x-api-path-slug: servicecaption-captionassetactionservewebvtt-get
+      parameters:
+      - in: query
+        name: captionAssetId
+      - in: query
+        name: localTimestamp
+      - in: query
+        name: No Name
+      - in: query
+        name: segmentDuration
+      - in: query
+        name: segmentIndex
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - ServeWebVTT
+  /service/caption_captionasset/action/setAsDefault:
+    get:
+      summary: Get Service Caption Captionasset Action Setasdefault
+      description: Markss the caption as default and removes that mark from all other
+        caption assets of the entry.
+      operationId: captionAsset.setAsDefault
+      x-api-path-slug: servicecaption-captionassetactionsetasdefault-get
+      parameters:
+      - in: query
+        name: captionAssetId
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - SetAsDefault
+  /service/caption_captionasset/action/setContent:
+    post:
+      summary: Post Service Caption Captionasset Action Setcontent
+      description: Update content of caption asset
+      operationId: captionAsset.setContent
+      x-api-path-slug: servicecaption-captionassetactionsetcontent-post
+      parameters:
+      - in: query
+        name: contentResource[assetId]
+        description: ID of the source asset
+      - in: query
+        name: contentResource[content]
+        description: Textual content
+      - in: query
+        name: contentResource[dropFolderFileId]
+        description: Id of the drop folder file object
+      - in: query
+        name: contentResource[entryId]
+        description: ID of the source entry
+      - in: formData
+        name: contentResource[fileData]
+        description: Represents the $_FILE
+      - in: query
+        name: contentResource[fileSyncObjectType]
+        description: The object type of the file sync object
+      - in: query
+        name: contentResource[flavorParamsId]
+        description: ID of the source flavor params, set to null to use the source
+          flavor
+      - in: query
+        name: contentResource[forceAsyncDownload]
+        description: Force Import Job
+      - in: query
+        name: contentResource[keepOriginalFile]
+        description: Should keep original file (false = mv, true = cp)
+      - in: query
+        name: contentResource[keyPassphrase]
+        description: Passphrase for SSH keys
+      - in: query
+        name: contentResource[localFilePath]
+        description: Full path to the local file
+      - in: query
+        name: contentResource[objectId]
+        description: The object id of the file sync object
+      - in: query
+        name: contentResource[objectSubType]
+        description: The object sub-type of the file sync object
+      - in: query
+        name: contentResource[objectType]
+      - in: query
+        name: contentResource[privateKey]
+        description: SSH private key
+      - in: query
+        name: contentResource[publicKey]
+        description: SSH public key
+      - in: query
+        name: contentResource[resources]
+      - in: query
+        name: contentResource[resource][assetId]
+        description: ID of the source asset
+      - in: query
+        name: contentResource[resource][content]
+        description: Textual content
+      - in: query
+        name: contentResource[resource][dropFolderFileId]
+        description: Id of the drop folder file object
+      - in: query
+        name: contentResource[resource][entryId]
+        description: ID of the source entry
+      - in: formData
+        name: contentResource[resource][fileData]
+        description: Represents the $_FILE
+      - in: query
+        name: contentResource[resource][fileSyncObjectType]
+        description: The object type of the file sync object
+      - in: query
+        name: contentResource[resource][flavorParamsId]
+        description: ID of the source flavor params, set to null to use the source
+          flavor
+      - in: query
+        name: contentResource[resource][forceAsyncDownload]
+        description: Force Import Job
+      - in: query
+        name: contentResource[resource][keepOriginalFile]
+        description: Should keep original file (false = mv, true = cp)
+      - in: query
+        name: contentResource[resource][keyPassphrase]
+        description: Passphrase for SSH keys
+      - in: query
+        name: contentResource[resource][localFilePath]
+        description: Full path to the local file
+      - in: query
+        name: contentResource[resource][objectId]
+        description: The object id of the file sync object
+      - in: query
+        name: contentResource[resource][objectSubType]
+        description: The object sub-type of the file sync object
+      - in: query
+        name: contentResource[resource][objectType]
+      - in: query
+        name: contentResource[resource][privateKey]
+        description: SSH private key
+      - in: query
+        name: contentResource[resource][publicKey]
+        description: SSH public key
+      - in: query
+        name: contentResource[resource][resources]
+      - in: query
+        name: contentResource[resource][resource][assetId]
+        description: ID of the source asset
+      - in: query
+        name: contentResource[resource][resource][content]
+        description: Textual content
+      - in: query
+        name: contentResource[resource][resource][dropFolderFileId]
+        description: Id of the drop folder file object
+      - in: query
+        name: contentResource[resource][resource][entryId]
+        description: ID of the source entry
+      - in: formData
+        name: contentResource[resource][resource][fileData]
+        description: Represents the $_FILE
+      - in: query
+        name: contentResource[resource][resource][fileSyncObjectType]
+        description: The object type of the file sync object
+      - in: query
+        name: contentResource[resource][resource][flavorParamsId]
+        description: ID of the source flavor params, set to null to use the source
+          flavor
+      - in: query
+        name: contentResource[resource][resource][forceAsyncDownload]
+        description: Force Import Job
+      - in: query
+        name: contentResource[resource][resource][keepOriginalFile]
+        description: Should keep original file (false = mv, true = cp)
+      - in: query
+        name: contentResource[resource][resource][keyPassphrase]
+        description: Passphrase for SSH keys
+      - in: query
+        name: contentResource[resource][resource][localFilePath]
+        description: Full path to the local file
+      - in: query
+        name: contentResource[resource][resource][objectId]
+        description: The object id of the file sync object
+      - in: query
+        name: contentResource[resource][resource][objectSubType]
+        description: The object sub-type of the file sync object
+      - in: query
+        name: contentResource[resource][resource][objectType]
+      - in: query
+        name: contentResource[resource][resource][privateKey]
+        description: SSH private key
+      - in: query
+        name: contentResource[resource][resource][publicKey]
+        description: SSH public key
+      - in: query
+        name: contentResource[resource][resource][resources]
+      - in: query
+        name: contentResource[resource][resource][resource][assetId]
+        description: ID of the source asset
+      - in: query
+        name: contentResource[resource][resource][resource][content]
+        description: Textual content
+      - in: query
+        name: contentResource[resource][resource][resource][dropFolderFileId]
+        description: Id of the drop folder file object
+      - in: query
+        name: contentResource[resource][resource][resource][entryId]
+        description: ID of the source entry
+      - in: formData
+        name: contentResource[resource][resource][resource][fileData]
+        description: Represents the $_FILE
+      - in: query
+        name: contentResource[resource][resource][resource][fileSyncObjectType]
+        description: The object type of the file sync object
+      - in: query
+        name: contentResource[resource][resource][resource][flavorParamsId]
+        description: ID of the source flavor params, set to null to use the source
+          flavor
+      - in: query
+        name: contentResource[resource][resource][resource][forceAsyncDownload]
+        description: Force Import Job
+      - in: query
+        name: contentResource[resource][resource][resource][keepOriginalFile]
+        description: Should keep original file (false = mv, true = cp)
+      - in: query
+        name: contentResource[resource][resource][resource][keyPassphrase]
+        description: Passphrase for SSH keys
+      - in: query
+        name: contentResource[resource][resource][resource][localFilePath]
+        description: Full path to the local file
+      - in: query
+        name: contentResource[resource][resource][resource][objectId]
+        description: The object id of the file sync object
+      - in: query
+        name: contentResource[resource][resource][resource][objectSubType]
+        description: The object sub-type of the file sync object
+      - in: query
+        name: contentResource[resource][resource][resource][objectType]
+      - in: query
+        name: contentResource[resource][resource][resource][privateKey]
+        description: SSH private key
+      - in: query
+        name: contentResource[resource][resource][resource][publicKey]
+        description: SSH public key
+      - in: query
+        name: contentResource[resource][resource][resource][resources]
+      - in: query
+        name: contentResource[resource][resource][resource][storageProfileId]
+        description: ID of storage profile to be associated with the created file
+          sync, used for file serving URL composing
+      - in: query
+        name: contentResource[resource][resource][resource][token]
+        description: Token that returned from upload
+      - in: query
+        name: contentResource[resource][resource][resource][url]
+        description: Remote URL, FTP, HTTP or HTTPS
+      - in: query
+        name: contentResource[resource][resource][resource][version]
+        description: The version of the file sync object
+      - in: query
+        name: contentResource[resource][resource][storageProfileId]
+        description: ID of storage profile to be associated with the created file
+          sync, used for file serving URL composing
+      - in: query
+        name: contentResource[resource][resource][token]
+        description: Token that returned from upload
+      - in: query
+        name: contentResource[resource][resource][url]
+        description: Remote URL, FTP, HTTP or HTTPS
+      - in: query
+        name: contentResource[resource][resource][version]
+        description: The version of the file sync object
+      - in: query
+        name: contentResource[resource][storageProfileId]
+        description: ID of storage profile to be associated with the created file
+          sync, used for file serving URL composing
+      - in: query
+        name: contentResource[resource][token]
+        description: Token that returned from upload
+      - in: query
+        name: contentResource[resource][url]
+        description: Remote URL, FTP, HTTP or HTTPS
+      - in: query
+        name: contentResource[resource][version]
+        description: The version of the file sync object
+      - in: query
+        name: contentResource[storageProfileId]
+        description: ID of storage profile to be associated with the created file
+          sync, used for file serving URL composing
+      - in: query
+        name: contentResource[token]
+        description: Token that returned from upload
+      - in: query
+        name: contentResource[url]
+        description: Remote URL, FTP, HTTP or HTTPS
+      - in: query
+        name: contentResource[version]
+        description: The version of the file sync object
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - SetContent
+  /service/caption_captionasset/action/update:
+    get:
+      summary: Get Service Caption Captionasset Action Update
+      description: Update caption asset
+      operationId: captionAsset.update
+      x-api-path-slug: servicecaption-captionassetactionupdate-get
+      parameters:
+      - in: query
+        name: captionAsset[accuracy]
+        description: The Accuracy of the caption content
+      - in: query
+        name: captionAsset[actualSourceAssetParamsIds]
+        description: Comma separated list of source flavor params ids
+      - in: query
+        name: captionAsset[captionParamsId]
+        description: '`insertOnly`The Caption Params used to create this Caption Asset'
+      - in: query
+        name: captionAsset[fileExt]
+        description: '`insertOnly`The file extension'
+      - in: query
+        name: captionAsset[format]
+        description: '`insertOnly`Enum Type: `KalturaCaptionType`The caption format'
+      - in: query
+        name: captionAsset[isDefault]
+        description: 'Enum Type: `KalturaNullableBoolean`Is default caption asset
+          of the entry'
+      - in: query
+        name: captionAsset[label]
+        description: Friendly label
+      - in: query
+        name: captionAsset[language]
+        description: 'Enum Type: `KalturaLanguage`The language of the caption asset
+          content'
+      - in: query
+        name: captionAsset[parentId]
+        description: '`insertOnly`The parent id of the asset'
+      - in: query
+        name: captionAsset[partnerData]
+        description: Partner private data
+      - in: query
+        name: captionAsset[partnerDescription]
+        description: Partner friendly description
+      - in: query
+        name: captionAsset[tags]
+        description: Tags used to identify the Flavor Asset in various scenarios
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionasset
+      - Action
+      - Update
+  /service/caption_captionparams/action/add:
+    get:
+      summary: Get Service Caption Captionparams Action Add
+      description: Add new Caption Params
+      operationId: captionParams.add
+      x-api-path-slug: servicecaption-captionparamsactionadd-get
+      parameters:
+      - in: query
+        name: captionParams[description]
+        description: The description of the Flavor Params
+      - in: query
+        name: captionParams[format]
+        description: '`insertOnly`Enum Type: `KalturaCaptionType`The caption format'
+      - in: query
+        name: captionParams[isDefault]
+        description: 'Enum Type: `KalturaNullableBoolean`Is default caption asset
+          of the entry'
+      - in: query
+        name: captionParams[label]
+        description: Friendly label
+      - in: query
+        name: captionParams[language]
+        description: '`insertOnly`Enum Type: `KalturaLanguage`The language of the
+          caption content'
+      - in: query
+        name: captionParams[mediaParserType]
+        description: 'Enum Type: `KalturaMediaParserType`Media parser type to be used
+          for post-conversion validation'
+      - in: query
+        name: captionParams[name]
+        description: The name of the Flavor Params
+      - in: query
+        name: captionParams[partnerId]
+      - in: query
+        name: captionParams[remoteStorageProfileIds]
+        description: Comma seperated ids of remote storage profiles that the flavor
+          distributed to, the distribution done by the conversion engine
+      - in: query
+        name: captionParams[requiredPermissions]
+      - in: query
+        name: captionParams[sourceAssetParamsIds]
+        description: Comma seperated ids of source flavor params this flavor is created
+          from
+      - in: query
+        name: captionParams[sourceParamsId]
+        description: Id of the caption params or the flavor params to be used as source
+          for the caption creation
+      - in: query
+        name: captionParams[sourceRemoteStorageProfileId]
+        description: Id of remote storage profile that used to get the source, zero
+          indicates Kaltura data center
+      - in: query
+        name: captionParams[systemName]
+        description: System name of the Flavor Params
+      - in: query
+        name: captionParams[tags]
+        description: The Flavor Params tags are used to identify the flavor for different
+          usage (e
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionparams
+      - Action
+      - Add
+  /service/caption_captionparams/action/delete:
+    get:
+      summary: Get Service Caption Captionparams Action Delete
+      description: Delete Caption Params by ID
+      operationId: captionParams.delete
+      x-api-path-slug: servicecaption-captionparamsactiondelete-get
+      parameters:
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionparams
+      - Action
+      - Delete
+  /service/caption_captionparams/action/get:
+    get:
+      summary: Get Service Caption Captionparams Action Get
+      description: Get Caption Params by ID
+      operationId: captionParams.get
+      x-api-path-slug: servicecaption-captionparamsactionget-get
+      parameters:
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionparams
+      - Action
+      - Get
+  /service/caption_captionparams/action/list:
+    get:
+      summary: Get Service Caption Captionparams Action List
+      description: List Caption Params by filter with paging support (By default -
+        all system default params will be listed too)
+      operationId: captionParams.list
+      x-api-path-slug: servicecaption-captionparamsactionlist-get
+      parameters:
+      - in: query
+        name: filter[advancedSearch][attribute]
+        description: 'Enum Type: `KalturaBaseEntryCompareAttribute`'
+      - in: query
+        name: filter[advancedSearch][categoriesMatchOr]
+      - in: query
+        name: filter[advancedSearch][categoryEntryStatusIn]
+      - in: query
+        name: filter[advancedSearch][categoryIdEqual]
+      - in: query
+        name: filter[advancedSearch][comparison]
+        description: 'Enum Type: `KalturaSearchConditionComparison`'
+      - in: query
+        name: filter[advancedSearch][contentLike]
+      - in: query
+        name: filter[advancedSearch][contentMultiLikeAnd]
+      - in: query
+        name: filter[advancedSearch][contentMultiLikeOr]
+      - in: query
+        name: filter[advancedSearch][cuePointsFreeText]
+      - in: query
+        name: filter[advancedSearch][cuePointSubTypeEqual]
+      - in: query
+        name: filter[advancedSearch][cuePointTypeIn]
+      - in: query
+        name: filter[advancedSearch][depthGreaterThanEqual]
+      - in: query
+        name: filter[advancedSearch][distributionProfileId]
+      - in: query
+        name: filter[advancedSearch][distributionSunStatus]
+        description: 'Enum Type: `KalturaEntryDistributionSunStatus`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionFlag]
+        description: 'Enum Type: `KalturaEntryDistributionFlag`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionStatus]
+        description: 'Enum Type: `KalturaEntryDistributionStatus`'
+      - in: query
+        name: filter[advancedSearch][entryDistributionValidationErrors]
+        description: Comma seperated validation error types
+      - in: query
+        name: filter[advancedSearch][extendedStatusEqual]
+        description: 'Enum Type: `KalturaUserEntryExtendedStatus`'
+      - in: query
+        name: filter[advancedSearch][extendedStatusIn]
+      - in: query
+        name: filter[advancedSearch][field]
+      - in: query
+        name: filter[advancedSearch][hasEntryDistributionValidationErrors]
+      - in: query
+        name: filter[advancedSearch][idEqual]
+      - in: query
+        name: filter[advancedSearch][idIn]
+      - in: query
+        name: filter[advancedSearch][indexIdGreaterThan]
+      - in: query
+        name: filter[advancedSearch][isQuiz]
+        description: 'Enum Type: `KalturaNullableBoolean`'
+      - in: query
+        name: filter[advancedSearch][items]
+      - in: query
+        name: filter[advancedSearch][memberIdEq]
+      - in: query
+        name: filter[advancedSearch][memberIdIn]
+      - in: query
+        name: filter[advancedSearch][memberPermissionsMatchAnd]
+      - in: query
+        name: filter[advancedSearch][memberPermissionsMatchOr]
+      - in: query
+        name: filter[advancedSearch][metadataProfileId]
+      - in: query
+        name: filter[advancedSearch][noDistributionProfiles]
+      - in: query
+        name: filter[advancedSearch][not]
+      - in: query
+        name: filter[advancedSearch][objectType]
+      - in: query
+        name: filter[advancedSearch][orderBy]
+        description: 'Enum Type: `KalturaCategoryEntryAdvancedOrderBy`'
+      - in: query
+        name: filter[advancedSearch][type]
+        description: 'Enum Type: `KalturaSearchOperatorType`'
+      - in: query
+        name: filter[advancedSearch][updatedAtGreaterThanOrEqual]
+      - in: query
+        name: filter[advancedSearch][updatedAtLessThanOrEqual]
+      - in: query
+        name: filter[advancedSearch][userIdEqual]
+      - in: query
+        name: filter[advancedSearch][userIdIn]
+      - in: query
+        name: filter[advancedSearch][value]
+      - in: query
+        name: filter[advancedSearch][watermarkId]
+      - in: query
+        name: filter[formatEqual]
+        description: 'Enum Type: `KalturaCaptionType`'
+      - in: query
+        name: filter[formatIn]
+      - in: query
+        name: filter[idEqual]
+      - in: query
+        name: filter[idIn]
+      - in: query
+        name: filter[isSystemDefaultEqual]
+        description: 'Enum Type: `KalturaNullableBoolean`'
+      - in: query
+        name: filter[orderBy]
+      - in: query
+        name: filter[systemNameEqual]
+      - in: query
+        name: filter[systemNameIn]
+      - in: query
+        name: filter[tagsEqual]
+      - in: query
+        name: No Name
+      - in: query
+        name: pager[pageIndex]
+        description: The page number for which {pageSize} of objects should be retrieved
+          (Default is 1)
+      - in: query
+        name: pager[pageSize]
+        description: The number of objects to retrieve
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionparams
+      - Action
+      - List
+  /service/caption_captionparams/action/update:
+    get:
+      summary: Get Service Caption Captionparams Action Update
+      description: Update Caption Params by ID
+      operationId: captionParams.update
+      x-api-path-slug: servicecaption-captionparamsactionupdate-get
+      parameters:
+      - in: query
+        name: captionParams[description]
+        description: The description of the Flavor Params
+      - in: query
+        name: captionParams[format]
+        description: '`insertOnly`Enum Type: `KalturaCaptionType`The caption format'
+      - in: query
+        name: captionParams[isDefault]
+        description: 'Enum Type: `KalturaNullableBoolean`Is default caption asset
+          of the entry'
+      - in: query
+        name: captionParams[label]
+        description: Friendly label
+      - in: query
+        name: captionParams[language]
+        description: '`insertOnly`Enum Type: `KalturaLanguage`The language of the
+          caption content'
+      - in: query
+        name: captionParams[mediaParserType]
+        description: 'Enum Type: `KalturaMediaParserType`Media parser type to be used
+          for post-conversion validation'
+      - in: query
+        name: captionParams[name]
+        description: The name of the Flavor Params
+      - in: query
+        name: captionParams[partnerId]
+      - in: query
+        name: captionParams[remoteStorageProfileIds]
+        description: Comma seperated ids of remote storage profiles that the flavor
+          distributed to, the distribution done by the conversion engine
+      - in: query
+        name: captionParams[requiredPermissions]
+      - in: query
+        name: captionParams[sourceAssetParamsIds]
+        description: Comma seperated ids of source flavor params this flavor is created
+          from
+      - in: query
+        name: captionParams[sourceParamsId]
+        description: Id of the caption params or the flavor params to be used as source
+          for the caption creation
+      - in: query
+        name: captionParams[sourceRemoteStorageProfileId]
+        description: Id of remote storage profile that used to get the source, zero
+          indicates Kaltura data center
+      - in: query
+        name: captionParams[systemName]
+        description: System name of the Flavor Params
+      - in: query
+        name: captionParams[tags]
+        description: The Flavor Params tags are used to identify the flavor for different
+          usage (e
+      - in: query
+        name: id
+      - in: query
+        name: No Name
+      responses:
+        200:
+          description: OK
+      tags:
+      - Service
+      - Caption
+      - Captionparams
+      - Action
+      - Update
   /service/captionsearch_captionassetitem/action/parse:
     get:
       summary: Get Service Captionsearch Captionassetitem Action Parse

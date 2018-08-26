@@ -7,84 +7,62 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-yout
 x-kinRank: "9"
 x-alexaRank: "2"
 tags: Captions
-created: "2018-06-25"
-modified: "2018-06-25"
+created: "2018-08-25"
+modified: "2018-08-25"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Youtube Delete Captions
-  x-api-slug: youtube
+- name: YouTube - Delete Captions
+  x-api-slug: captions-delete
   description: Deletes a specified caption track.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
   humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions
-  tags: Captions
+  baseURL: https://www.googleapis.com//youtube/v1
+  tags: Videos, Google APIs, Stack Network, Stack, internet, Technology, Mobile, SaaS,
+    General Data, Relative Data, Service API, Pedestal, Historical Data API, Relative
+    StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-delete-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-delete-openapi.md
-- name: Youtube Get Captions
-  x-api-slug: youtube
+- name: YouTube - Get Captions
+  x-api-slug: captions-get
   description: Returns a list of caption tracks that are associated with a specified
     video. Note that the API response does not contain the actual captions and that
     the captions.download method provides the ability to retrieve a caption track.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
   humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions
-  tags: Captions
+  baseURL: https://www.googleapis.com//youtube/v1
+  tags: Videos, Google APIs, Stack Network, Stack, internet, Technology, Mobile, SaaS,
+    General Data, Relative Data, Service API, Pedestal, Historical Data API, Relative
+    StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-get-openapi.md
-- name: Youtube Add Captions
-  x-api-slug: youtube
-  description: Uploads a caption track.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
-  humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions
-  tags: Captions
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-post-openapi.md
-- name: Youtube Put Captions
-  x-api-slug: youtube
-  description: Updates a caption track. When updating a caption track, you can change
-    the track's draft status, upload a new caption file for the track, or both.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
-  humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions
-  tags: Captions
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captions-put-openapi.md
-- name: Youtube Get Captions
-  x-api-slug: youtube
+- name: YouTube - Get Captions
+  x-api-slug: captionsid-get
   description: Downloads a caption track. The caption track is returned in its original
     format unless the request specifies a value for the tfmt parameter and in its
     original language unless the request specifies a value for the tlang parameter.
   image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
   humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1//captions/{id}
-  tags: Captions
+  baseURL: https://www.googleapis.com//youtube/v1
+  tags: Videos, Google APIs, Stack Network, Stack, internet, Technology, Mobile, SaaS,
+    General Data, Relative Data, Service API, Pedestal, Historical Data API, Relative
+    StreamRank, Streams
   properties:
   - type: x-postman-collection
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/captionsid-get-openapi.md
-- name: Youtube
-  x-api-slug: youtube
-  description: Enjoy the videos and music you love, upload original content, and share
-    it all with friends, family, and the world on YouTube.
-  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/11515-youtube.jpg
-  humanURL: https://www.youtube.com/
-  baseURL: https://www.googleapis.com//youtube/v1
-  tags: Captions
-  properties:
-  - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/captions/master/_listings/youtube/openapi.md
 x-common:
+- type: x-api-gallery
+  url: http://yelp.api.gallery.streamdata.io
+- type: x-api-stack
+  url: http://youtube.stack.network
 - type: x-articles
   url: https://developers.google.com/youtube/articles/
 - type: x-authentication
